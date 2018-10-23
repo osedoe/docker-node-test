@@ -1,0 +1,8 @@
+FROM node:9
+# A partir de lo siguiente, el '.' (origen o donde estamos) es lo que definimos
+WORKDIR /usr/src/app
+# Copiar todo lo que hay en el directorio del Dockerfile en donde definimos WORKDIR
+COPY . .
+RUN npm install
+EXPOSE 3000
+CMD ["npm", "run", "start"]
